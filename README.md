@@ -3,23 +3,25 @@
 ## Example
 
 ```
-  const instance= window.instance = new Datepicker(document.getElementById('element'), {
+  const instance = new Datepicker(document.getElementById('element'), {
             lang:"he",
             mode:"time",
-            placeholder:"test",
             disablePast:true,
             value:Date.now(),
             onChange: (newValue) => {
-
+                {...do something with the value}
             }
         });
+```
+## SetValue
+```
+instance.setValue("2021-12-05");
 ```
 
 ## Options
 
 #### lang: he | en,
 #### mode: time | date | datetime,
-#### placeholder: string,
 #### disablePast: boolean,
 #### value: Date.now(),
 #### onChange: Function

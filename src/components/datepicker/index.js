@@ -9,21 +9,20 @@ import TimePicker from '@mui/lab/TimePicker';
 
 export default React.forwardRef((props, ref) => {
   const { onChange, label, value, lang, placeholder, disablePast, mode } = props;
-  const [pickerValue, setValue] = React.useState(value);
+  const [pickerValue, setPickerValue] = React.useState(value);
 
   const _onChange = (newValue) => {
-    setValue(newValue);
+    setPickerValue(newValue);
     onChange(newValue);
   }
   React.useImperativeHandle(ref, () => ({
-    init(newOptions) {
-
+    setValue(newOptions) {
+      setPickerValue(newOptions)
     }
   }));
   return <CustomizedHook mode={mode} placeholder={placeholder} disablePast={disablePast} value={pickerValue} lang={lang} label={label} onChange={_onChange} />;
 });
 function useMode(props) {
-  debugger
   const { onChange, label, value, disablePast, mode } = props;
   switch (mode) {
     case "date":
