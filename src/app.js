@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 class MuiDatepicker {
     constructor(target, props) {
-        const { onChange, label,value,lang,placeholder,disablePast,mode ="date" } = props;
+        const { onChange, label,value,lang="en",placeholder,disablePast,mode ="date" } = props;
         const elementRef = React.createRef();
         this.target = target;
         setTimeout(() => {
