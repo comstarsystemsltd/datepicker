@@ -53,7 +53,7 @@ function useMode(props) {
       return "modes:[date, time, datetime]"
   }
 }
-function CustomizedHook(props) {
+function CustomizedHook(props={}) {
   const { lang } = props;
   const language =  typeof lang === "string" && lang.toLowerCase().indexOf("he") !== -1 ? he : enUS;
   return (
