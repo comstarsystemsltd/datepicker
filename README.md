@@ -17,6 +17,11 @@
 ```
 instance.setValue("2021-12-05");
 ```
+## SetValue via attribute
+```
+const datepicker = document.getElementById('element');
+datepicker.setAttribute("value","2021-12-05");
+```
 
 ## Options
 
