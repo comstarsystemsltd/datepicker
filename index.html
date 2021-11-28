@@ -9,15 +9,14 @@
 </head>
 
 <body>
-<div id="test"></div>
+<div id="root"></div>
 
 
     <script>
-       
         window.addEventListener('DOMContentLoaded', (event) => {
-          
-            const instance= window.instance = new Datepicker(document.getElementById('test'), {
-            mode:"date",
+            
+            const instance= window.instance = new Datepicker(document.getElementById('root'), {
+            mode:"datetime",
             disablePast:true,
             value:Date.now(),
             onChange: (newValue) => {
